@@ -50,7 +50,7 @@ The project adheres to 3NF (Third Normal Form) for optimized data storage and re
 ## How to Run
 ### Clone the Repository:
 ```bash
-git clone https://github.com/your-username/gizmo-fashion.git
+git clone https://github.com/Sher-Hassan/Ecommerce-MySQL-React.git
 cd gizmo-fashion
 ```
 
