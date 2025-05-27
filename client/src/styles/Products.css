@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oleo+Script:wght@400;700&family=Signika:wght@300..700&display=swap');
+
+.prodSec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+}
+.prodSec h1{
+    color: black;
+    font-family: "Signika", sans-serif;
+    user-select: none;
+}
+
+.prodSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 0;
+    font-size: 1.3rem;
+    margin-top: 2vh;
+    min-height: 120vh;
+}
+
+.prodMain {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+
+}
+
+.prodMainLeft {
+    flex: 1;
+    padding: 20px;
+    background-color: #d4d2d2;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 20vw;
+    position: fixed;
+}
+
+.prodMainLeft h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #000000;
+    font-family: "Signika", sans-serif;
+    user-select: none;
+}
+
+.prodMainLeft .searchBar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.prodMainLeft ul {
+    list-style-type: none;
+    padding: 0;
+    user-select: none;
+}
+
+.prodMainLeft ul li {
+    margin-bottom: 10px;
+}
+
+.prodMainLeft label {
+    font-size: 1rem;
+    color: #3a3a3a;
+}
+
+
+.prodMainLeft .searchButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.prodMainLeft .searchButton:hover {
+    transform: scale(1.05);
+}
+
+/* Product Cards */
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 350px;
+    gap: 20px;
+    align-items: start;
+}
+
+.productCard {
+  font-family: "Signika", sans-serif;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%; /* fills the grid row height */
+  max-height: 350px; /* consistent height */
+}
+.productCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.productImg {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    object-position: center center;
+    margin-bottom: 10px;
+}
+
+.productCard h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.productCard p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.clink {
+    text-decoration: none;
+    color: black;
+
+}
+
+/* Home Products */
+
+/* Main container for home products */
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsive grid */
+    gap: 20px;
+    /* Space between product cards */
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    /* Constrain width for larger screens */
+    background-color: #f8fafc;
+    /* Light background color */
+}
+
+/* Individual product card */
+.productCard {
+    background-color: #fff;
+    /* White background for contrast */
+    border: 1px solid #e5e7eb;
+    /* Light border for separation */
+    border-radius: 8px;
+    /* Smooth edges */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    padding: 16px;
+    text-align: center;
+    /* Center-align text */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth hover effect */
+}
+
+/* Product card hover effect */
+.productCard:hover {
+    transform: translateY(-5px);
+    /* Lift card on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    /* Deepen shadow */
+    cursor: pointer;
+    /* Pointer cursor for interactivity */
+}
+
+/* Product image */
+.productImg {
+    width: 70%;
+    /* Full width of the container */
+    height: 180px;
+    /* Fixed height for consistency */
+    object-fit: cover;
+    /* Maintain aspect ratio, fill container */
+    border-radius: 4px;
+    /* Smooth edges for images */
+    margin-bottom: 12px;
+    /* Space below the image */
+}
+
+/* Product title */
+.productCard h3 {
+    font-size: 1.25rem;
+    /* Medium font size */
+    color: #1f2937;
+    /* Dark gray for readability */
+    margin-bottom: 8px;
+    /* Space below the title */
+}
+
+/* Product description */
+.productCard p {
+    font-size: 1rem;
+    /* Base font size */
+    color: #4b5563;
+    /* Muted text color */
+    margin: 4px 0;
+    /* Consistent spacing */
+}
+
+/* Product price */
+.productCard p:last-of-type {
+    font-weight: bold;
+    /* Highlight price */
+    color: #16a34a;
+    /* Green for pricing emphasis */
+    font-size: 1.1rem;
+    /* Slightly larger for emphasis */
+}
+
+/* Search Bar */
+.searchBar {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Price Range */
+.priceRange {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+
+
+}
+
+.priceLabels {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-family: Arial, sans-serif;
+    user-select: none;
+}
+
+.priceSlider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    position: absolute;
+    pointer-events: auto;
+    margin: 0;
+}
+
+
+.priceSlider:first-of-type {
+    z-index: 2;
+    background-color: transparent;
+}
+
+.priceSlider:last-of-type {
+    z-index: 3;
+    margin-top: 0;
+    background-color: transparent;
+}
+
+.priceSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #4d4d4d;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    margin-top: -5px;
+    /* To center thumb on track */
+    position: relative;
+    bottom: 10px;
+}
+
+.priceSlider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #2e7d32;
+}
+
+.searchButton {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+
+.prodMainLeft1 {
+    width: 20vw;
+}
+
+.priceInput {
+  width: 80px;
+  padding: 5px;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+}

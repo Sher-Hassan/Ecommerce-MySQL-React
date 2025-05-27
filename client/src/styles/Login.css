@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oleo+Script:wght@400;700&family=Signika:wght@300..700&display=swap');
+/* General styling for the container */
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: white;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  padding: 1rem;
+}
+
+/* Heading styling */
+.auth h1 {
+  font-size: 5.5rem; 
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Signika", sans-serif;
+  text-align: center;
+  color: #000000;
+  user-select: none;
+}
+
+/* Form styling */
+.auth form {
+  background: #1f2937;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Input fields styling */
+.auth form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #374151;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.auth form input:focus {
+  background: #4b5563;
+}
+
+/* Primary Login button styling */
+.auth form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #4f46e5;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.auth form button:hover {
+  background: #4338ca;
+  transform: scale(1.05);
+}
+
+.auth form button:active {
+  background: #312e81;
+  transform: scale(0.98);
+}
+
+/* Divider styling */
+.auth .divider {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.auth .divider span {
+  flex: 1;
+  border-bottom: 1px solid #9ca3af;
+  margin: 0 0.5rem;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+/* Google Login button adjustments */
+.auth .google-login {
+  margin-top: 1rem;
+}
+
+.GoogleLogin{
+  width: 100%;
+  padding: 0.75rem;
+  background: #db4437;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Error and Success messages styling */
+.auth form p {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Link styling */
+.auth form span {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.auth form span a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth form span a:hover {
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .auth h1 {
+    font-size: 2rem;
+  }
+
+  .auth form {
+    padding: 1.5rem;
+  }
+
+  .auth form input, 
+  .auth form button {
+    font-size: 1rem;
+  }
+}

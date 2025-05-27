@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oleo+Script:wght@400;700&family=Signika:wght@300..700&display=swap');
+.home-container {
+    font-family: "Signika", sans-serif;
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+    min-height: 100vh;
+    padding: 0;
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.image-slider {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 1500px; /* Constrain the slider to a reasonable width */
+  height: 550px; /* Set a fixed height for the slider */
+  overflow: hidden; 
+  margin: 0 auto; /* Center the slider horizontally */
+  border-radius: 8px; /* Add a slight rounding to make it look modern */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
+  position: relative; /* Needed for overlay positioning */
+}
+
+/* Dark overlay for the image slider */
+.image-slider::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+   /* Adjust opacity as needed */
+  pointer-events: none; /* Allow clicks to pass through */
+  border-radius: 8px;
+}
+
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fit nicely within the container */
+  display: block;
+}
+
+.home-header {
+  background: #4f46e5;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.home-title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.home-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  
+}
+
+.home-section1{
+  max-width: 1100px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.home-section2 {
+  max-width: 1100px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.home-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.08);
+  padding: 2rem;
+  text-align: center;
+}
+
+.home-cardC {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.08);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.1s ease;
+  text-decoration: none;
+}
+
+.home-cardC:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.image-slider img {
+  width: 100%; /* Ensure the image stretches to the full width of the container */
+  height: 100%; /* Make the image take up the full height of the container */
+  object-fit: cover; /* Ensures the image scales properly to fill the container without distortion */
+  border-radius: 8px; /* Retain the rounded corners */
+  display: block;
+  object-position: bottom;
+}
+.homeSec3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+    user-select: none;
+}
+
+/* Home Products */
+
+/* Main container for home products */
+.homProducts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #f8fafc;
+    border: 8px solid #bebebe;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 12px;
+}
+
+/* Prevent single product from stretching full width */
+.homProducts:has(.product-card:only-child) {
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Individual product card */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 270px;
+}
+
+/* Product card hover effect */
+.product-card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deepen shadow */
+  cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+/* Product image */
+.product-image {
+  width: 70%; /* Full width of the container */
+  height: 180px; /* Fixed height for consistency */
+  object-fit: cover; /* Maintain aspect ratio, fill container */
+  border-radius: 4px; /* Smooth edges for images */
+  margin-bottom: 12px; /* Space below the image */
+}
+
+/* Product title */
+.product-card h3 {
+  font-size: 1.25rem; /* Medium font size */
+  color: #1f2937; /* Dark gray for readability */
+  margin-bottom: 8px; /* Space below the title */
+}
+
+/* Product description */
+.product-card p {
+  font-size: 1rem; /* Base font size */
+  color: #4b5563; /* Muted text color */
+  margin: 4px 0; /* Consistent spacing */
+}
+
+/* Product price */
+.product-card p:last-of-type {
+  font-weight: bold; /* Highlight price */
+  color: #16a34a; /* Green for pricing emphasis */
+  font-size: 1.1rem; /* Slightly larger for emphasis */
+}
+
+
+.sec2l{
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+.sec2r{
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+.sec2H{
+  font-size: 4rem;
+}
+.catD{
+  text-decoration: none;
+  color: black;
+}
+
+/* Why choose us section */
+
+.why-choose-us {
+  background-color: #f8fafc; /* Light background for a clean look */
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.sec2H {
+  font-size: 2.5rem;
+  color: black; /* Accent color for the heading */
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.why-choose-us-cards {
+  display: flex;
+  flex-wrap: wrap; /* Ensure it adapts for smaller screens */
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.why-card {
+  background-color: #ffffff; /* Card background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 1.5rem;
+  max-width: 300px; /* Ensure consistent card size */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.why-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.why-card img {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 1rem;
+}
+
+.why-card h3 {
+  font-size: 1.5rem;
+  color: #111827; /* Dark text for good contrast */
+  margin: 0.5rem 0;
+}
+
+.why-card p {
+  font-size: 1rem;
+  color: #4b5563; /* Subtle gray text for descriptions */
+  margin: 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  width: 90vw;
+}
+
+.hero h1{
+  font-family: "Signika", sans-serif;
+  font-weight: bold;
+  font-size: 200px;
+  color: black;
+}
+
+.heroimg{
+  width: 69vh;
+  
+}
+.heror{
+  display: flex;
+  justify-content: flex-end;
+  width: 50vw;
+}
+
+.head h1 {
+  margin-bottom: 0;
+  line-height: 0.7;
+  position: relative;
+  left: 2vw;
+  user-select: none;
+}
+
+.head h1 + h1 {
+  margin-top: 0.2em; /* or 0 */
+}
+
+.h1n{
+  padding-left: 5vw;
+  font-family: "Signika", sans-serif;
+  font-weight: bold;
+  font-size: 200px;
+  color: black;
+}
+.h2n{
+  padding-left: 5vw;
+  font-family: "Signika", sans-serif;
+  font-weight: bold;
+  font-size: 200px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.descript{
+  margin-top: 40px;
+}
+.descript h2{
+  margin-bottom: 0;
+  line-height: 0.7;
+  position: relative;
+  left: 8vw;
+  margin-top: 10px;
+  user-select: none;
+}
+.descript p{
+  margin-bottom: 0;
+  line-height: 0.7;
+  position: relative;
+  left: 8vw;
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+}
+.btnhome{
+  position: relative;
+  left: 125px;
+  top: 20px;
+}
+
+.btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 60px;
+  background: #fff;
+  border: 2px solid #000;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+  
+}
+
+.btn a:hover {
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-color: #000;
+}
+.fade-text {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.fade-text.visible {
+  opacity: 1;
+}
+.moving-strip {
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 75px;
+  user-select: none;
+}
+
+
+.strip-content {
+  display: flex;
+  width: 200%; /* Content needs to be twice the width for infinite effect */
+  animation: infinite-scroll 10s linear infinite;
+  user-select: none;
+}
+
+.strip-content div {
+  display: flex;
+  white-space: nowrap;
+  flex: 1; /* Each part takes up equal width */
+}
+
+.strip-content span {
+  margin: 0 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.Section2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 30px;
+}
+.p111{
+  width: 300px;
+}
+.p222{
+  width: 250px;
+}
+
+.sec11 {
+    border: 2px solid black;
+    border-color: #cbd0d0;
+    border-radius: 30px;
+    background-color: #d3d6d8;
+    display: flex;
+    background-image: url("/src/Resources/sec2L11.png");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 300px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.sec12 {
+    border: 2px solid black;
+    border-color: #cbd0d0;
+    border-radius: 30px;
+    background-color: #d3d6d8;
+    display: flex;
+    background-image: url("/src/Resources/sec2L12.png");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 300px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.sec21 {
+    border: 2px solid black;
+    border-color: #cbd0d0;
+    border-radius: 30px;
+    background-color: #d3d6d8;
+    display: flex;
+    width: 500px;
+    background-image: url("/src/Resources/sec2R21.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec22 {
+    border: 2px solid black;
+    border-color: #cbd0d0;
+    border-radius: 30px;
+    background-color: #d3d6d8;
+    display: flex;
+    width: 500px;
+    background-image: url("/src/Resources/sec2R22.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec2btn{
+  position: relative;
+  bottom: 15px;
+
+}
+

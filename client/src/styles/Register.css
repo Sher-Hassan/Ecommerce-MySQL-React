@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oleo+Script:wght@400;700&family=Signika:wght@300..700&display=swap');
+/* General styling for the container */
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: black;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  padding: 1rem;
+}
+
+/* Heading styling */
+.auth h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  user-select: none;
+}
+
+/* Form styling */
+.auth form {
+  background: #1f2937;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Input fields styling */
+.auth form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #374151;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.auth form input:focus {
+  background: #4b5563;
+}
+
+/* Primary Register button styling */
+.auth form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #b4b4b4;
+  border: none;
+  border-radius: 8px;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.auth form button:hover {
+  background: #000000;
+  color: white;
+  transform: scale(1.05);
+}
+
+.auth form button:active {
+  background: #4338ca;
+  transform: scale(0.98);
+}
+
+/* Link styling */
+.auth form span {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.auth form span a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth form span a:hover {
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .auth h1 {
+    font-size: 2rem;
+  }
+
+  .auth form {
+    padding: 1.5rem;
+  }
+
+  .auth form input, 
+  .auth form button {
+    font-size: 1rem;
+  }
+}
