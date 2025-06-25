@@ -91,6 +91,4 @@ cd gizmo-fashion
 - **Real-Time Notifications:** Email and SMS updates for order status.
 
 
-## Contributors
-- **Sher Hassan**
-- **Haider Jangir**
+
