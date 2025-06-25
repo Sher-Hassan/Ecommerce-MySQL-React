@@ -1,6 +1,8 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import db from '../db.js'; // Assuming you have a db.js file for MySQL connection setup
+import dotenv from "dotenv";
+dotenv.config();
 
 // User Registration
 export const register = async (req, res) => {
